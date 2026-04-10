@@ -1,0 +1,58 @@
+.custom-navbar {
+  width: 100%;
+  background-color: rgba(240, 240, 240, 1);
+padding-top: 13px;
+padding-bottom: 13px;
+}
+
+.logo {
+  height: 60px;
+  /* width: 0px; */
+  object-fit: contain;
+}
+
+.location {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.dropdown-arrow svg{
+  rotate: 90deg;
+  margin-top: -3px !important;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.complaint-btn {
+  border: 2px solid #ff7a00 !important;
+  color: #ff7a00  !important;
+  background-color: transparent  !important;
+  border-radius: 8px !important;
+}
+
+.complaint-btn:hover {
+  background-color: #ff7a00;
+  color: white;
+}
+
+.login-btn {
+  background-color: #1e3a8a  !important;
+  color: white  !important;
+  border: none;
+  padding: 6px 17px !important;
+}
+
+.login-btn:hover {
+  background-color: #162d6b;
+}
