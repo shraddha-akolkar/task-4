@@ -71,12 +71,13 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
   width: 100%;
-  max-width: 1500px; /* ✅ updated from 700px */
+  max-width: 1800px; /* ✅ increased for a much wider search container */
   margin: auto;
 }
 
 .search-box input {
-  flex: 1; /* 👈 increase this value */
+  flex: 8; /* 👈 much larger input width */
+  min-width: 0;
   border: none;
   outline: none;
   font-size: 14px;
