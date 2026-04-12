@@ -1,42 +1,74 @@
-.concern-wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.concern-section {
-  background: #f25c05;
-  border-radius: 15px;
-  padding: 60px 65px;
+/* MAIN BOX */
+.concern-box {
+  background: #f25c05; /* orange */
+  border-radius: 20px;
+  padding: 45px 60px;
   color: #fff;
 }
 
+/* TEXT */
+.concern-text h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  font-family: 'Euclid';
 
-
-.text-content h2 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 10px;
 }
 
-.text-content p {
-  font-size: 16px;
-  opacity: 0.9;
+.concern-text p {
+  font-size: 15px;
   margin: 0;
+  font-family: 'Euclid';
+
 }
 
+/* BUTTON */
 .concern-btn {
-  background: #fff;
+  background: rgba(255, 255, 255, 1);
   color: #000;
   border: none;
-  padding: 10px 20px;
-  /* width: 240px; */
+  padding: 12px 25px;
   border-radius: 12px;
   font-weight: 500;
-  font-size: 16px;
-  transition: 0.3s ease;
+  transition: 0.3s;
+  font-size: 15px;
 }
 
 .concern-btn:hover {
-  background: #000;
-  color: #fff;
+  background: #ddd;
+}
+
+/* =========================
+   📱 RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .concern-box {
+    padding: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .concern-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+
+  .concern-text h2 {
+    font-size: 24px;
+  }
+
+  .concern-text p {
+    font-size: 17px;
+  }
+
+  .concern-btn {
+    width: 100%;
+    font-size: 16px;
+
+  }
 }

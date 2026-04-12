@@ -1,11 +1,13 @@
 import React from "react";
 import "./Footer.css";
+
 const Footer = () => {
   return (
-    <footer className="footer side-space">
-      <div className="footer-container">
-        {/* TOP SECTION */}
+    <footer className="footer  side-space">
+      <div className="container-fluid footer-container">
+        {/* TOP */}
         <h2 className="footer-title">MyJansevak</h2>
+
         <p className="footer-desc">
           Duis efficitur leo congue est malesuada, et tempus enim tempus.
           Vestibulum maximus sodales neque id vulputate. Praesent vitae aliquam
@@ -17,14 +19,14 @@ const Footer = () => {
         </p>
 
         {/* NEWSLETTER */}
-        <div className="newsletter">
-          <div>
+        <div className="newsletter d-flex justify-content-between align-items-center flex-wrap">
+          <div className="newsletter-text">
             <h3>Newsletter</h3>
             <p>Be the first one to know latest news and updates</p>
           </div>
 
-          <div className="newsletter-input">
-            <input type="text" placeholder="Enter your email" />
+          <div className="newsletter-input position-relative">
+            <input type="email" placeholder="Enter your email" />
             <button>Submit</button>
           </div>
         </div>
@@ -64,6 +66,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* THIS WILL ALIGN WITH SUBMIT */}
           <div>
             <h4>Support</h4>
             <ul>
@@ -79,7 +82,8 @@ const Footer = () => {
         {/* BOTTOM */}
         <div className="footer-bottom">
           <p>
-            ©MyJansevak, 2026 All rights reserved. Powered by <b>Hats-Off</b>
+            ©MyJansevak, 2026 All rights reserved. Powered by{" "}
+            <span>Hats-Off</span>
           </p>
           <p>Privacy policy | Terms of use</p>
         </div>

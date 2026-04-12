@@ -4,44 +4,45 @@ import img from "../../assets/images/earth.png";
 
 const Responsibility = () => {
   return (
-    <section className="section-space side-space">
-      <div className="responsibility-card">
-        <div className="row">
-          <div className="col col-8">
-            <div className="content">
-              <h2>Our Nation, Our Responsibility</h2>
+    <div className="section-space side-space">
+      <div className="container">
+        <div className="about-box">
+          {/* LEFT CONTENT */}
+          <div className="about-content">
+            <h2>Our Nation, Our Responsibility</h2>
 
-              <p>
-                Integer at tincidunt dui, in tristique mauris. Suspendisse
-                potenti. Vestibulum aliquam enim nec pretium pulvinar. Sed non
-                sagittis enim, quis convallis ligula. Maecenas eleifend bibendum
-                mollis. Integer pretium ligula ut rutrum vulputate. Donec
-                sollicitudin feugiat dolor, et sollicitudin ligula scelerisque
-                vel. Sed pellentesque dui ac diam tristique, in hendrerit ex
-                hendrerit.
-              </p>
+            <p>
+              Integer at tincidunt dui, in tristique mauris. Suspendisse
+              potenti. Vestibulum aliquam enim nec pretium pulvinar. Sed non
+              sagittis enim, quis convallis ligula. Maecenas eleifend bibendum
+              mollis. Integer pretium ligula ut rutrum vulputate. Donec
+              sollicitudin feugiat dolor, et sollicitudin ligula scelerisque
+              vel. Sed pellentesque dui ac diam tristique, in hendrerit ex
+              hendrerit.
+            </p>
 
-              <p>
-                Praesent in hendrerit purus, quis imperdiet neque. Donec felis
-                dolor, hendrerit condimentum mauris eget, consectetur consequat
-                ante. Maecenas ut eros dapibus, ullamcorper erat sit amet,
-                molestie tellus. Vivamus libero lectus, lobortis non quam a,
-                consectetur condimentum arcu. Curabitur eget commodo lacus, id
-                placerat arcu.{" "}
-              </p>
+            <p>
+              Praesent in hendrerit purus, quis imperdiet neque. Donec felis
+              dolor, hendrerit condimentum mauris eget, consectetur consequat
+              ante. Maecenas ut eros dapibus, ullamcorper erat sit amet,
+              molestie tellus. Vivamus libero lectus, lobortis non quam a,
+              consectetur condimentum arcu. Curabitur eget commodo lacus, id
+              placerat arcu.
+            </p>
 
-              <button className="button btn">About Us</button>
-            </div>
+            <button className="about-btn">About Us</button>
           </div>
 
-          <div className="col col-4">
-            <div className="image-box">
-              <img src={img} alt="Earth" />
-            </div>
+          {/* RIGHT IMAGE */}
+          <div className="about-image">
+            <img
+              src={img} // 👉 replace with your image path
+              alt="about"
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
