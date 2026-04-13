@@ -18,6 +18,9 @@
 }
 
 .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 1.5rem;
   position: relative;
 }
@@ -48,7 +51,6 @@
   color: #1a3a6e;
   margin: 0 0 0.5rem;
   line-height: 1.1;
-  margin-left: 20px;
   font-family: 'Euclid';
 
 }
@@ -62,7 +64,6 @@
   text-align: center;
   font-family: 'Euclid';
   font-weight: 500;
-  margin-right: -20px;
 
 }
 
@@ -104,12 +105,6 @@
   .stat-item {
     /* padding: 10px; */
   }
-
-  .side-space{
-  padding-left: 15px;
-  padding-right:  10px;
-}
-
 
   .stat-number {
     font-size: 29px;

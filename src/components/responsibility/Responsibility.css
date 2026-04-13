@@ -17,7 +17,7 @@
 
 .about-content{
   /* padding: 40px; */
-  padding-left: 50px;
+  padding-inline: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -69,7 +69,7 @@
   }
 
   .about-content {
-    padding-left: 25px;
+    padding-inline: 25px;
     padding-top: 25px;
     padding-bottom: 25px;
   }

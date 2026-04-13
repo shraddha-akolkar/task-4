@@ -62,7 +62,7 @@ font-size: 30px;
   color: #444;
   line-height: 1.3;
   padding-top: 5px;
-  padding-right: 12px;
+  padding-inline: 12px;
   font-family: 'Euclid';
 
 }
@@ -178,10 +178,6 @@ padding-top: 0px;
 
 
 @media (max-width: 1024px) {
-.side-space{
-  padding-left: 10px;
-  padding-right: -89px !important;
-}
   .slider-item {
     min-width: 50%;  
   }
@@ -192,7 +188,8 @@ padding-top: 0px;
   }
 
   .slider-track-wrapper {
-    padding: 0 20px;
+    padding-inline: 20px;
+    padding-block: 0;
   }
 
   .arrow-btn.left {
@@ -206,10 +203,6 @@ padding-top: 0px;
 
 
 @media (max-width: 768px) {
-  .side-space{
-  padding-left: 10px;
-  padding-right: 11px !important;
-}
   .slider-item {
     min-width: 100%;
     max-width: 100%;
@@ -217,7 +210,8 @@ padding-top: 0px;
   }
 
   .slider-track-wrapper {
-    padding: 0 2px;
+    padding-inline: 2px;
+    padding-block: 0;
   }
 
   .testimonial-card {

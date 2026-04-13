@@ -38,7 +38,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   font-family: 'Euclid';
   font-weight: 400;
 
-padding-left: 10px;
+padding-inline: 10px;
 
 }
 
@@ -47,7 +47,7 @@ padding-left: 10px;
   margin: 5px 0 0;
   font-weight: 500;
   font-family: 'Euclid';
-padding-left: 10px;
+padding-inline: 10px;
   color: #222;
   line-height: 1.1;
 }
