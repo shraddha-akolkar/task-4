@@ -4,7 +4,7 @@ import Search from "../../assets/svg/Search";
 
 const Overview = () => {
   return (
-    <section className="overview-section">
+    <section className="overview-section side-space">
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-8 col-md-10 col-12">

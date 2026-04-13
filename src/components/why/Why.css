@@ -17,7 +17,10 @@
 
 .why-card-wrapper {
   position: relative;
-  width: 240px;  
+  width: 240px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   flex-shrink: 0;
 }
 
@@ -34,6 +37,12 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  row-gap: 40px;
+}
+
+.why-col {
+  display: flex;
+  justify-content: center;
 }
 
 .why-icon {
@@ -79,10 +88,24 @@ font-weight: 400;
 }
 
 @media (max-width: 768px) {
+  .why-section {
+    padding: 48px 0 64px;
+  }
+
+  .why-heading {
+    margin-bottom: 28px;
+  }
+
+  .why-heading h2 {
+    font-size: 26px;
+  }
+
   .why-card-wrapper {
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: 340px;
+    padding-inline: 0;
+    padding-bottom: clamp(2rem, 14vw, 5.5rem);
+    margin-bottom: 8px;
   }
 
   .card-bg {
@@ -90,51 +113,49 @@ font-weight: 400;
     min-height: unset;
   }
 
- 
+  .why-row {
+    gap: 24px 16px;
+    row-gap: 32px;
+  }
 
-
-
-.why-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
- .why-icon {
-    width: 80px;
-    height: 80px;
-    top: 50px;
+  .why-icon {
+    width: 56px;
+    height: 56px;
+    top: 7.5%;
   }
 
   .why-icon svg {
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
   }
 
-.why-content {
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  .why-content {
+    top: 30%;
+    width: 78%;
+    max-width: 260px;
+    padding-bottom: 0.25rem;
+  }
+
+  .why-content h5 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .why-content p {
+    font-size: 14px;
+    line-height: 1.45;
+    padding-top: 6px;
+  }
 }
 
-.why-content h5 {
-  font-weight: 600;
-  margin-top: 40px;
-  font-family: 'Euclid';
-font-size: 30px;
-}
+@media (max-width: 575px) {
+  .why-row {
+    row-gap: 40px;
+  }
 
-.why-content p {
-  font-size: 20px;
-  color: #555;
-  line-height: 1.1;
-  font-family: 'Euclid';
-font-weight: 400;
-  /* padding-top: 18px; */
-}
-
-  
+  .why-card-wrapper {
+    max-width: 100%;
+    padding-bottom: clamp(2.5rem, 16vw, 6rem);
+    margin-bottom: 0;
+  }
 }

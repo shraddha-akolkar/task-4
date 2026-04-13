@@ -11,9 +11,9 @@
   padding-bottom: 40px;
 }
 
-.side-space{
-  padding-left: 6%;
-  padding-right: 6%;
+/* Horizontal page gutter — always symmetric; use padding-inline only (no per-side overrides in components). */
+.side-space {
+  padding-inline: max(1rem, 6%);
 }
 
 
