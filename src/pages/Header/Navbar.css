@@ -3,7 +3,7 @@
   background-color: rgba(240, 240, 240, 1);
 padding-top: 13px;
 padding-bottom: 13px;
-  position: fixed;   /* 🔥 */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;  
@@ -20,6 +20,7 @@ padding-bottom: 13px;
   font-size: 14px;
   color: #333;
   cursor: pointer;
+  font-weight: 400 !important;
 }
 
 .dropdown-arrow {
@@ -31,12 +32,34 @@ padding-bottom: 13px;
   rotate: 90deg;
   margin-top: -3px !important;
 }
+.dropdown-menu-custom {
+  position: absolute;
+  top: 40px;
+  right: 210px; /* adjust based on layout */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 6px 0;
+  min-width: 140px;
+  z-index: 999;
+}
+
+.dropdown-item-custom {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-item-custom:hover {
+  background: #f2f2f2;
+}
 
 .btn {
   font-size: 14px;
   padding: 6px 14px;
   border-radius: 6px;
-  font-weight: 500;
+
+
 }
 
 .complaint-btn {
@@ -44,11 +67,15 @@ padding-bottom: 13px;
   color: #ff7a00  !important;
   background-color: transparent  !important;
   border-radius: 8px !important;
+  font-family: 'Euclid';
+  font-weight: 500 !important;
+  font-size: 15px !important;
+
 }
 
 .complaint-btn:hover {
-  background-color: #ff7a00;
-  color: white;
+  background-color: #ff7a00 !important;
+  color: white !important;
 }
 
 .login-btn {
@@ -57,39 +84,40 @@ padding-bottom: 13px;
   border: none;
   padding: 6px 17px !important;
   margin-right: 12px;
+   font-family: 'Euclid';
+  font-weight: 500 !important;
+  font-size: 15px !important;
 }
 
 .login-btn:hover {
-  background-color: #162d6b;
+  background-color: #1b44b4 !important;
 }
 
 
 
-/* =========================
-   MOBILE & TABLET FIX
-========================= */
+
 @media (max-width: 768px) {
 
-  /* 🔥 Prevent content overlap due to fixed navbar */
   body {
     /* padding-top: 70px; */
   }
 
-  /* NAVBAR */
   .nav-main {
     padding: 10px 12px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 0 0 12px 12px !important;
   }
 
-  /* FORCE SINGLE ROW */
   .nav-main .container,
   .nav-main .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+    border-radius: 0 0 12px 12px !important;
+box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
 
-  /* LEFT SIDE (LOGO + LOCATION) */
   .nav-left {
     display: flex;
     align-items: center;
@@ -115,16 +143,14 @@ padding-bottom: 13px;
     margin-top: -2px !important;
   }
 
-  /* RIGHT SIDE BUTTONS */
   .nav-right {
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
-  /* HIDE COMPLAINT BUTTON */
     .complaint-btn {
-    display: inline-block; /* show it (remove earlier hide if any) */
+    display: inline-block; 
     font-size: 11px !important;
     padding: 4px 8px !important;
     border-width: 1.5px !important;
@@ -132,7 +158,6 @@ padding-bottom: 13px;
     line-height: 1.2;
   }
 
-  /* LOGIN BUTTON */
   .login-btn {
     padding: 5px 10px !important;
     font-size: 12px;

@@ -7,7 +7,6 @@ const Responsibility = () => {
     <div className="section-space side-space">
       <div className="container">
         <div className="about-box">
-          {/* LEFT CONTENT */}
           <div className="about-content">
             <h2>Our Nation, Our Responsibility</h2>
 
@@ -33,12 +32,8 @@ const Responsibility = () => {
             <button className="about-btn">About Us</button>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="about-image">
-            <img
-              src={img} // 👉 replace with your image path
-              alt="about"
-            />
+            <img src={img} alt="about" />
           </div>
         </div>
       </div>

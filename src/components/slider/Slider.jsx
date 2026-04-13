@@ -57,7 +57,6 @@ const Slider = () => {
   const [index, setIndex] = useState(3);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
-  // 🔥 Responsive
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) setItemsPerView(1);
@@ -70,18 +69,15 @@ const Slider = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🔥 Extended data (for infinite loop)
   const extended = [
     ...testimonials.slice(-itemsPerView),
     ...testimonials,
     ...testimonials.slice(0, itemsPerView),
   ];
 
-  // 🔥 Navigation
   const next = () => setIndex((prev) => prev + 1);
   const prev = () => setIndex((prev) => prev - 1);
 
-  // 🔥 Infinite loop fix
   useEffect(() => {
     if (index === extended.length - itemsPerView) {
       setTimeout(() => {
@@ -98,14 +94,12 @@ const Slider = () => {
     }
   }, [index, itemsPerView, extended.length]);
 
-  // 🔥 Enable transition again
   useEffect(() => {
     if (!isTransitioning) {
       setTimeout(() => setIsTransitioning(true), 50);
     }
   }, [isTransitioning]);
 
-  // 🔥 Swipe
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
@@ -128,12 +122,10 @@ const Slider = () => {
         </h2>
 
         <div className="slider-wrapper">
-          {/* LEFT */}
           <button className="arrow-btn left" onClick={prev}>
             <Arrow />
           </button>
 
-          {/* TRACK */}
           <div
             className="slider-track-wrapper"
             onTouchStart={handleTouchStart}
@@ -173,13 +165,11 @@ const Slider = () => {
             </div>
           </div>
 
-          {/* RIGHT */}
           <button className="arrow-btn right" onClick={next}>
             <Arrow />
           </button>
         </div>
 
-        {/* DOTS */}
         <div className="dots text-center mt-4">
           {testimonials.map((_, i) => (
             <span

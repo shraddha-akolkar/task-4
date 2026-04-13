@@ -1,15 +1,20 @@
-/* MAIN BOX */
+.main{
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
 .concern-box {
-  background: #f25c05; /* orange */
+  background: #f25c05; 
   border-radius: 20px;
   padding: 45px 60px;
   color: #fff;
+  margin-top: 30px;
+
 }
 
-/* TEXT */
 .concern-text h2 {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 4px;
   font-family: 'Euclid';
 
@@ -19,38 +24,39 @@
   font-size: 15px;
   margin: 0;
   font-family: 'Euclid';
-
+font-weight: 300;
 }
 
-/* BUTTON */
 .concern-btn {
   background: rgba(255, 255, 255, 1);
   color: #000;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 17px;
   border-radius: 12px;
   font-weight: 500;
   transition: 0.3s;
   font-size: 15px;
+  font-family: 'Euclid';
+
 }
 
 .concern-btn:hover {
   background: #ddd;
 }
 
-/* =========================
-   📱 RESPONSIVE
-========================= */
 
-/* Tablet */
-@media (max-width: 992px) {
+
+@media (max-width: 1024px) {
   .concern-box {
     padding: 30px;
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
+  .main{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
   .concern-box {
     flex-direction: column;
     text-align: center;
@@ -59,16 +65,16 @@
   }
 
   .concern-text h2 {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .concern-text p {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .concern-btn {
     width: 100%;
-    font-size: 16px;
+    font-size: 19px;
 
   }
 }

@@ -88,7 +88,6 @@ const Spotlight = () => {
   return (
     <div className="side-space">
       <div className="container spotlight-section">
-        {/* Header */}
         <div className="d-flex justify-content-between align-items-center flex-wrap mb-4">
           <h2 className="spotlight-title">Leaders in Spotlight</h2>
 
@@ -101,8 +100,7 @@ const Spotlight = () => {
           </ul>
         </div>
 
-        {/* Cards */}
-        <div className="row g-3">
+        <div className="row g-3 spotlight-slider">
           {data.map((item, index) => (
             <div className="col-lg-3 col-md-6" key={index}>
               <div className="leader-card">
@@ -123,18 +121,20 @@ const Spotlight = () => {
                   </div>
 
                   <p className="party">
-                    <b>Ward:</b> {item.ward}
+                    <span>Ward:</span>
+                    <span className="info"> {item.ward}</span>
                   </p>
-                  <p>
-                    <b>Political Party:</b> {item.party}
+                  <p className="party">
+                    <span>Political Party: </span>
+                    <span className="info"> {item.party}</span>
                   </p>
-                  <p>
-                    <b>Election Year:</b> {item.year}
+                  <p className="party">
+                    {" "}
+                    <span>Election Year: </span>
+                    <span className="info"> {item.year}</span>
                   </p>
 
-                  <button
-                    className={`btn profile-btn ${item.active ? "filled" : "outline"}`}
-                  >
+                  <button className="btn profile-btn  outline">
                     View Profile
                   </button>
                 </div>

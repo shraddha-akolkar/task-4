@@ -51,19 +51,14 @@ const Why = () => {
           {data.map((item, index) => (
             <div key={index} className="col-lg-2 col-md-4 col-sm-6">
               <div className="why-card-wrapper">
-                {/* CARD IMAGE */}
                 <img src={item.card} alt="card" className="card-bg" />
 
-                {/* ICON */}
                 <div className="why-icon">{item.icon}</div>
 
-                {/* CONTENT */}
                 <div className="why-content text-center">
                   <h5>{item.title}</h5>
                   <p>{item.text}</p>
                 </div>
-
-                {/* DOTS */}
               </div>
             </div>
           ))}

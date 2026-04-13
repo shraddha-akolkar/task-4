@@ -1,19 +1,19 @@
-/* =========================
-   MAIN CONTAINER
-========================= */
+
 .about-box {
   background: #e9e9e9;
   border-radius: 20px;
   /* padding: 40px; */
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
   align-items: center;
+
+  /* margin-top: 40px; */
+  /* margin-bottom: 40px; */
 }
 
-/* =========================
-   TEXT
-========================= */
+
 
 .about-content{
   /* padding: 40px; */
@@ -35,25 +35,24 @@
   margin-bottom: 15px;
 }
 
-/* BUTTON */
 .about-btn {
   background: rgba(0, 47, 141, 1);
   color: #fff;
   border: none;
-  padding: 10px 26px;
+  padding: 8px 18px;
   border-radius: 10px;
   font-weight: 500;
   /* margin-top: 10px; */
   transition: 0.3s;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .about-btn:hover {
   background: #122c55;
 }
 
-/* =========================
-   IMAGE
-========================= */
+
 .about-image img {
   width: 100%;
  border-top-right-radius: 15px;
@@ -62,12 +61,10 @@
 
 }
 
-/* =========================
-   📱 TABLET (≤ 992px)
-========================= */
-@media (max-width: 992px) {
+
+@media (max-width: 1024px) {
   .about-box {
-    grid-template-columns: 1fr 1fr; /* keep 2 columns */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
@@ -78,49 +75,60 @@
   }
 
   .about-content h2 {
-    font-size: 26px;
+    font-size: 30px;
   }
 
   .about-content p {
-    font-size: 14px;
+    font-size: 20px !important;
   }
 }
 
 
-/* =========================
-   📱 MOBILE (≤ 768px)
-========================= */
 @media (max-width: 768px) {
+
   .about-box {
-    grid-template-columns: 1fr; /* stack */
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px; 
+    /* margin-left: -12px;
+    margin-right: -8px; */
   }
 
   .about-content {
-    padding: 0;
+    display: contents;
   }
 
   .about-content h2 {
-    font-size: 22px;
+    order: 1;
+    text-align: center;
+    padding-top: 10px;
   }
 
+ .about-content p{
+  font-size: 20px;
+ }
+
+  .about-image {
+      order: 2;
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; 
+}
   .about-content p {
-    font-size: 16px;
+    order: 3;
+    text-align: center;
+    font-size: 17px;
   }
 
   .about-btn {
+    order: 4;
     width: 100%;
-    margin-top: 10px;
-  }
-
-  .about-image {
-    margin-top: 15px;
-  }
-
-  .about-image img {
-
-    border-radius: 12px;
-     /* optional polish */
+    font-size: 21px;
   }
 }

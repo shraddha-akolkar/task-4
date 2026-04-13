@@ -1,14 +1,14 @@
 .stats {
-  /* background: #f4f4f4; */
   text-align: center;
 }
 
-/* TITLE */
 .stats-title {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 500;
   margin-bottom: 15px;
-  color: #222;
+  color: rgba(17, 17, 17, 1);
+  font-family: 'Euclid';
+
 }
 
 .stats-grid {
@@ -26,43 +26,55 @@
   content: '';
   position: absolute;
   right: 0;
-  top: 10%;
-  height: 80%;
-  width: 2px;
-  background: #e05a3a;
+  top: 15%;
+  height: 60%;
+  width: 0;
+
+  border-right: 2px solid; 
+
+  border-image: linear-gradient(
+    180deg,
+    rgba(226, 45, 12, 0) 0%,
+    #E22D0C 50%,
+    rgba(226, 45, 12, 0) 100%
+  );
+
+  border-image-slice: 1; 
 }
 
 .stat-number {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   color: #1a3a6e;
   margin: 0 0 0.5rem;
   line-height: 1.1;
-  margin-left: -20px;
+  margin-left: 20px;
+  font-family: 'Euclid';
+
 }
 
 .stat-label {
-  font-size: 14px;
-  color: #555;
+  font-size: 15px;
+  color: rgba(17, 17, 17, 1);
   line-height: 1.4;
   margin: 0;
   max-width: 30ch;
   text-align: center;
+  font-family: 'Euclid';
+  font-weight: 500;
+  margin-right: -20px;
 
 }
 
 
-/* =========================
-   📱 TABLET (≤ 992px)
-========================= */
-@media (max-width: 992px) {
+
+@media (max-width: 1024px) {
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr); /* 4 → 2 columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
   }
 
-  /* Remove vertical lines */
   .stat-item::after {
     display: none;
   }
@@ -73,36 +85,39 @@
 }
 
 
-/* =========================
-   📱 MOBILE (≤ 576px)
-========================= */
+
 @media (max-width: 768px) {
 
   .stats-title {
-    font-size: 24px;
+    font-size: 29px;
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr); /* ✅ FORCE 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
-  /* Remove vertical divider */
   .stat-item::after {
     display: none;
   }
 
   .stat-item {
-    padding: 10px;
+    /* padding: 10px; */
   }
 
+  .side-space{
+  padding-left: 15px;
+  padding-right:  10px;
+}
+
+
   .stat-number {
-    font-size: 26px;
+    font-size: 29px;
     margin-left: 0;
   }
 
   .stat-label {
-    font-size: 13px;
+    font-size: 20px;
     max-width: 100%;
   }
 

@@ -20,7 +20,6 @@ const Overview = () => {
                 in our citizens and leaders.
               </p>
 
-              {/* SEARCH BOX */}
               <div className="search-box">
                 <span className="search-icon">
                   <Search />

@@ -1,6 +1,31 @@
 import React from "react";
-import youtube from "../../assets/images/youutube.png";
+import { useRef } from "react";
 import "./News.css";
+// import img from "../../assets/images/youutube.png";
+import play from "../../assets/images/play.png";
+import Arrow from "../../assets/svg/Arrow";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import video1 from "../../assets/video/video1.mp4";
+import video2 from "../../assets/video/video2.mp4";
+const slides = [
+  {
+    video: video1,
+  },
+  {
+    video: video2,
+  },
+  {
+    video: video1,
+  },
+  {
+    video: video2,
+  },
+];
 
 const NewsData = [
   {
@@ -23,28 +48,69 @@ const NewsData = [
 
 const News = () => {
   return (
-    <div className="news-section container section-space ">
-      <div className="row-news d-flex">
-        <div className="col-lg-6 left-section">
-          <h3 className="mb-4">News / Press Release</h3>
+    <div className="side-space news-section">
+      <div className="container">
+        <div className="row g-4">
+          <div className="col-lg-7">
+            <h4 className="section-title">News / Press Release</h4>
 
-          {NewsData.map((item, index) => (
-            <div key={index} className="news-card mb-3 p-3">
-              <p className="mb-1">{item.label}</p>
-              <h6 className="mb-0">{item.des}</h6>
+            <div className="news-list">
+              {NewsData.map((item, index) => (
+                <div key={index} className="news-card">
+                  <span className="news-date">{item.label}</span>
+                  <p className="news-text">{item.des}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="col-lg-6">
-          <h3 className="mb-4">Spotlight</h3>
+          <div className="col-lg-5">
+            <h4 className="section-title">Spotlight</h4>
 
-          <div className="spotlight-card position-relative">
-            <img src={youtube} alt="video" className="img-fluid w-100" />
+            <Swiper
+              modules={[Navigation, Pagination]}
+              navigation={{
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+              }}
+              pagination={{ clickable: true }}
+              loop={true}
+              className="spotlight-swiper"
+            >
+              {slides.map((item, index) => {
+                const videoRef = useRef(null);
 
-            {/* <div className="play-btn">
-              ▶
-            </div> */}
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="spotlight-card">
+                      <video
+                        ref={videoRef}
+                        src={item.video}
+                        className="spotlight-img"
+                        muted
+                        loop
+                        playsInline
+                      />
+
+                      <div
+                        className="play-btn"
+                        onClick={() => videoRef.current.play()}
+                      >
+                        <img src={play} alt="play" />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+
+              <div className="custom-prev">
+                <Arrow />
+              </div>
+              <div className="custom-next">
+                {" "}
+                <Arrow />
+              </div>
+            </Swiper>
           </div>
         </div>
       </div>

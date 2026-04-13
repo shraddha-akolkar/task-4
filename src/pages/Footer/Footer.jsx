@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const shortText = `Duis efficitur leo congue est malesuada, et tempus enim tempus. Vestibulum maximus sodales neque id vulputate. Praesent vitae aliquam velit. Sed mauris eros, congue ac efficitur nec, pellentesque ac massa. Morbi eleifend augue sem, sit amet tincidunt enim viverra sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos velit...`;
+
+  const fullText = `Duis efficitur leo congue est malesuada, et tempus enim tempus.
+  Vestibulum maximus sodales neque id vulputate. Praesent vitae aliquam velit.
+ Praesent in hendrerit purus, quis imperdiet neque. Donec felis dolor, hendrerit condimentum mauris eget, consectetur consequat ante. Maecenas ut eros dapibus, ullamcorper erat sit amet, molestie tellus. Vivamus libero lectus, lobortis non quam a, consectetur condimentum arcu. Curabitur eget commodo lacus, id placerat arcu. ...`;
+
   return (
-    <footer className="footer  side-space">
+    <footer className="footer side-space">
       <div className="container-fluid footer-container">
-        {/* TOP */}
         <h2 className="footer-title">MyJansevak</h2>
 
         <p className="footer-desc">
-          Duis efficitur leo congue est malesuada, et tempus enim tempus.
-          Vestibulum maximus sodales neque id vulputate. Praesent vitae aliquam
-          velit. Sed mauris eros, congue ac efficitur nec, pellentesque ac
-          massa. Morbi eleifend augue sem, sit amet tincidunt enim viverra sed.
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-          per inceptos himenaeos...
-          <span className="read-more"> Read More</span>
+          {expanded ? fullText : shortText}
+          <span className="read-more" onClick={() => setExpanded(!expanded)}>
+            {expanded ? " Read Less" : " Read More"}
+          </span>
         </p>
 
-        {/* NEWSLETTER */}
         <div className="newsletter d-flex justify-content-between align-items-center flex-wrap">
           <div className="newsletter-text">
             <h3>Newsletter</h3>
@@ -31,7 +34,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* LINKS */}
         <div className="footer-links">
           <div>
             <h4>About</h4>
@@ -66,7 +68,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* THIS WILL ALIGN WITH SUBMIT */}
           <div>
             <h4>Support</h4>
             <ul>
@@ -79,13 +80,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* BOTTOM */}
         <div className="footer-bottom">
           <p>
             ©MyJansevak, 2026 All rights reserved. Powered by{" "}
             <span>Hats-Off</span>
           </p>
-          <p>Privacy policy | Terms of use</p>
+          <p className="bottom-right">
+            Privacy policy <span className="">|</span> Terms of use
+          </p>
         </div>
       </div>
     </footer>
